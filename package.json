@@ -1,0 +1,24 @@
+{
+  "name": "roco-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "roco": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node --test",
+    "ssh": "node src/ssh-server.js",
+    "postinstall": "node scripts/prepare-pty.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@inquirer/core": "^10.3.2",
+    "@inquirer/prompts": "^7.0.0",
+    "node-pty": "^1.1.0",
+    "ssh2": "^1.17.0"
+  }
+}
